@@ -1,0 +1,282 @@
+aid: lazada
+name: Lazada
+description: |
+  Lazada Group is a Southeast Asian e-commerce platform owned by
+  Alibaba Group since 2016, operating localized marketplaces in
+  Singapore, Malaysia, Indonesia, Thailand, the Philippines, and
+  Vietnam. Lazada Open Platform (openapi.lazada.com) provides a
+  partner-facing REST API for sellers, brands, ERP / OMS vendors,
+  and TP (TaoBao Partner) developers — covering Product / Category
+  catalog, Order processing, Logistics and shipping label
+  generation, Finance and payout reconciliation, Shop and Seller
+  profile, Promotion management (vouchers, FlexiCombo, Sponsored
+  Solutions), Image / asset upload, Returns and reverse logistics,
+  and Bidirectional message webhooks. Authentication uses an App
+  Key + App Secret plus a per-seller access token issued via
+  OAuth-style seller authorization, with all requests signed
+  using HMAC-SHA256 in Alibaba's TOP signature scheme.
+type: Index
+position: Provider
+access: Partner
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - E-commerce
+  - Marketplace
+  - Southeast Asia
+  - Alibaba
+  - Orders
+  - Products
+  - Logistics
+  - Lazada
+url: https://raw.githubusercontent.com/api-evangelist/lazada/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.20'
+apis:
+  - aid: lazada:authorization
+    name: Lazada Seller Authorization (OAuth) API
+    description: |
+      Seller authorization flow: a Lazada seller grants a
+      registered Lazada Open Platform app permission to call
+      Lazada APIs on their shop's behalf, issuing access and
+      refresh tokens scoped per region.
+    humanURL: https://open.lazada.com/apps/doc/doc?nodeId=10557&docId=108260
+    baseURL: https://auth.lazada.com
+    tags:
+      - Authentication
+      - OAuth
+      - Authorization
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/doc?nodeId=10557&docId=108260
+  - aid: lazada:product
+    name: Lazada Product API
+    description: |
+      Create, update, retrieve, and remove products and SKUs;
+      manage variations, attributes, images, and stock; submit
+      to Lazada Category Tree and Category Attribute APIs.
+    humanURL: https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate
+    baseURL: https://api.lazada.com
+    tags:
+      - Products
+      - SKUs
+      - Catalog
+      - Inventory
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate
+  - aid: lazada:category
+    name: Lazada Category API
+    description: |
+      Retrieve Lazada's hierarchical category tree, category
+      attributes, and category-specific attribute values used to
+      structure product submissions.
+    humanURL: https://open.lazada.com/apps/doc/api?path=%2Fcategory%2Ftree%2Fget
+    baseURL: https://api.lazada.com
+    tags:
+      - Categories
+      - Attributes
+      - Taxonomy
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/api?path=%2Fcategory%2Ftree%2Fget
+  - aid: lazada:order
+    name: Lazada Order API
+    description: |
+      Retrieve orders, order items, order details, and buyer
+      information; pack orders into shipments; set status to
+      ready-to-ship and packed; cancel and reject orders.
+    humanURL: https://open.lazada.com/apps/doc/api?path=%2Forders%2Fget
+    baseURL: https://api.lazada.com
+    tags:
+      - Orders
+      - Fulfillment
+      - Buyers
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/api?path=%2Forders%2Fget
+  - aid: lazada:logistics
+    name: Lazada Logistics API
+    description: |
+      Generate shipping labels (AWB), retrieve shipment providers,
+      manifest pickups, and fetch shipment tracking information
+      across Lazada's regional logistics network (LEX) and 3PL
+      partners.
+    humanURL: https://open.lazada.com/apps/doc/api?path=%2Forder%2Fpackage%2Fdocument%2Fget
+    baseURL: https://api.lazada.com
+    tags:
+      - Logistics
+      - Shipping
+      - AWB
+      - Tracking
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/api?path=%2Forder%2Fpackage%2Fdocument%2Fget
+  - aid: lazada:finance
+    name: Lazada Finance API
+    description: |
+      Retrieve transaction details, fee breakdowns, payout
+      history, and invoice records used by sellers and ERPs to
+      reconcile Lazada marketplace settlements.
+    humanURL: https://open.lazada.com/apps/doc/api?path=%2Ffinance%2Ftransaction%2Fdetail%2Fget
+    baseURL: https://api.lazada.com
+    tags:
+      - Finance
+      - Payouts
+      - Settlement
+      - Invoices
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/api?path=%2Ffinance%2Ftransaction%2Fdetail%2Fget
+  - aid: lazada:shop
+    name: Lazada Shop / Seller API
+    description: |
+      Retrieve shop information, seller performance, store
+      categories, store taxonomy, and seller-account metadata.
+    humanURL: https://open.lazada.com/apps/doc/api?path=%2Fseller%2Fget
+    baseURL: https://api.lazada.com
+    tags:
+      - Shop
+      - Seller
+      - Profile
+      - Performance
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/api?path=%2Fseller%2Fget
+  - aid: lazada:promotion
+    name: Lazada Promotion API
+    description: |
+      Create, update, list, and remove seller-level promotions —
+      vouchers (collectible, shop-wide, item-level), FlexiCombo
+      bundles, and product-level discounts.
+    humanURL: https://open.lazada.com/apps/doc/api?path=%2Fpromotion%2Fvoucher%2Fadd
+    baseURL: https://api.lazada.com
+    tags:
+      - Promotions
+      - Vouchers
+      - Bundles
+      - Discounts
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/api?path=%2Fpromotion%2Fvoucher%2Fadd
+  - aid: lazada:image
+    name: Lazada Image API
+    description: |
+      Upload images to Lazada's CDN-backed image library and
+      retrieve the image URLs used when creating or updating
+      products.
+    humanURL: https://open.lazada.com/apps/doc/api?path=%2Fimage%2Fupload
+    baseURL: https://api.lazada.com
+    tags:
+      - Images
+      - Media
+      - CDN
+      - Assets
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/api?path=%2Fimage%2Fupload
+  - aid: lazada:returns
+    name: Lazada Returns / Reverse API
+    description: |
+      Retrieve return requests, return order details, and refund
+      status; submit return acceptance or rejection actions and
+      coordinate reverse-logistics pickup.
+    humanURL: https://open.lazada.com/apps/doc/api?path=%2Freverse%2Forder%2Fdetail%2Flist%2Fget
+    baseURL: https://api.lazada.com
+    tags:
+      - Returns
+      - Reverse Logistics
+      - Refunds
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/api?path=%2Freverse%2Forder%2Fdetail%2Flist%2Fget
+  - aid: lazada:chat-message
+    name: Lazada Chat (IM) API
+    description: |
+      Bidirectional buyer-seller messaging API for in-app
+      conversations on Lazada — including sending and retrieving
+      chat sessions, message lists, and templated responses.
+    humanURL: https://open.lazada.com/apps/doc/api?path=%2Fim%2Fmessage%2Fsend
+    baseURL: https://api.lazada.com
+    tags:
+      - Messaging
+      - Chat
+      - Customer Service
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/api?path=%2Fim%2Fmessage%2Fsend
+  - aid: lazada:push-message
+    name: Lazada Push Notification API
+    description: |
+      Subscribe to push notifications for order, return, item,
+      and IM events; verify message signatures and ack
+      deliveries from Lazada's message channel.
+    humanURL: https://open.lazada.com/apps/doc/doc?nodeId=10557&docId=108261
+    baseURL: https://api.lazada.com
+    tags:
+      - Webhooks
+      - Events
+      - Push
+      - Notifications
+    properties:
+      - type: Documentation
+        url: https://open.lazada.com/apps/doc/doc?nodeId=10557&docId=108261
+features:
+  - name: Six-Country SEA Marketplace
+    description: A single API surface supports sellers across Lazada Singapore, Malaysia, Indonesia, Thailand, Philippines, and Vietnam.
+  - name: Alibaba TOP Signature Auth
+    description: Requests are signed using Alibaba's TOP HMAC-SHA256 scheme over App Key, App Secret, timestamp, and parameters.
+  - name: Push Webhooks
+    description: Real-time order, return, product, and chat events are delivered to partner endpoints for synchronization.
+  - name: End-to-End Seller Operations
+    description: Coverage spans products, orders, logistics, finance, promotions, images, returns, and IM in one platform.
+  - name: TP (TaoBao Partner) Program
+    description: Vetted TP / Lazada Partner developers gain higher quotas and certified-app status for marketplace distribution.
+useCases:
+  - name: ERP / OMS Integration
+    description: ERP and OMS vendors connect sellers' inventory, orders, and fulfillment to Lazada marketplaces.
+  - name: Multi-Country Selling
+    description: Brand owners manage products and orders across all six Lazada country marketplaces from a single integration.
+  - name: Marketing Automation
+    description: Automate vouchers, FlexiCombo bundles, and promotions through API-driven marketing workflows.
+  - name: Reconciliation
+    description: Pull finance and transaction data into accounting systems for Lazada settlement reconciliation.
+integrations:
+  - name: Shopify
+  - name: WooCommerce
+  - name: Magento
+  - name: BigCommerce
+  - name: SAP
+  - name: Oracle NetSuite
+  - name: Lazada Logistics (LEX)
+  - name: Ninja Van
+  - name: J&T Express
+authentication:
+  - type: AppKeyHMAC
+    description: Each request is signed with HMAC-SHA256 using the App Secret over App Key, parameters, timestamp, and HTTP path.
+  - type: SellerAccessToken
+    description: Seller-scoped access tokens are issued via the seller authorization flow and refreshed via refresh tokens.
+  - type: WebhookSignature
+    description: Push notification deliveries are signed; partners verify signatures with their App Secret before processing.
+common:
+  - type: Marketplace
+    url: https://www.lazada.com/
+  - type: DeveloperPortal
+    url: https://open.lazada.com/
+  - type: Documentation
+    url: https://open.lazada.com/apps/doc/doc?nodeId=10557
+  - type: APIExplorer
+    url: https://open.lazada.com/apps/doc/api
+  - type: SellerCenter
+    url: https://sellercenter.lazada.com/
+  - type: BrandPortal
+    url: https://brands.lazada.com/
+  - type: ParentCompany
+    url: https://www.alibabagroup.com/
+  - type: Newsroom
+    url: https://www.lazada.com/en/about/
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/lazada/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
