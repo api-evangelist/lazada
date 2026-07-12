@@ -259,6 +259,10 @@ authentication:
   - type: WebhookSignature
     description: Push notification deliveries are signed; partners verify signatures with their App Secret before processing.
 common:
+  - type: VulnerabilityDisclosure
+    url: security/lazada-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/lazada-domain-security.yml
   - type: Marketplace
     url: https://www.lazada.com/
   - type: DeveloperPortal
