@@ -32,6 +32,15 @@ position: Provider
 access: Partner
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lazada.png
 tags:
+  - E-Commerce
+  - Marketplace
+  - Southeast Asia
+  - Alibaba
+  - Order
+  - Product
+  - Logistics
+  - Lazada
+tags_raw:
   - E-commerce
   - Marketplace
   - Southeast Asia
@@ -56,6 +65,9 @@ apis:
     baseURL: https://auth.lazada.com
     tags:
       - Authentication
+      - Authorization
+    tags_raw:
+      - Authentication
       - OAuth
       - Authorization
     properties:
@@ -70,6 +82,11 @@ apis:
     humanURL: https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate
     baseURL: https://api.lazada.com
     tags:
+      - Product
+      - SKUs
+      - Catalog
+      - Inventory
+    tags_raw:
       - Products
       - SKUs
       - Catalog
@@ -101,6 +118,10 @@ apis:
     humanURL: https://open.lazada.com/apps/doc/api?path=%2Forders%2Fget
     baseURL: https://api.lazada.com
     tags:
+      - Order
+      - Fulfillment
+      - Buyers
+    tags_raw:
       - Orders
       - Fulfillment
       - Buyers
@@ -180,6 +201,11 @@ apis:
     humanURL: https://open.lazada.com/apps/doc/api?path=%2Fimage%2Fupload
     baseURL: https://api.lazada.com
     tags:
+      - Image
+      - Media
+      - CDN
+      - Assets
+    tags_raw:
       - Images
       - Media
       - CDN
@@ -226,6 +252,11 @@ apis:
     humanURL: https://open.lazada.com/apps/doc/doc?nodeId=10557&docId=108261
     baseURL: https://api.lazada.com
     tags:
+      - Webhook
+      - Event
+      - Push
+      - Notification
+    tags_raw:
       - Webhooks
       - Events
       - Push
