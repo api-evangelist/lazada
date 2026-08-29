@@ -16,6 +16,17 @@ description: |
   OAuth-style seller authorization, with all requests signed
   using HMAC-SHA256 in Alibaba's TOP signature scheme.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: unknown
