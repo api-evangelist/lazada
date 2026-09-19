@@ -182,6 +182,11 @@ apis:
     tags:
       - Shop
       - Seller
+      - Profiles
+      - Performance
+    tags_raw:
+      - Shop
+      - Seller
       - Profile
       - Performance
     properties:
