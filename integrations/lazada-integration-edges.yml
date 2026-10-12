@@ -1,0 +1,18 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://monid.ai/tools/lazada
+checked:
+- https://composio.dev/toolkits/lazada
+- https://monid.ai/tools/lazada
+- https://n8n.io/integrations/lazada/
+- https://zapier.com/apps/lazada/integrations
+summary: null
+marketplace_apps:
+- marketplace: monid
+  channel: agent-gateway
+  app: lazada
+  url: https://monid.ai/tools/lazada
+  identity: slug
+edges: []
+templates: []
